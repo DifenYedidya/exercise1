@@ -1,97 +1,60 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html>
-<head>
+ <head>
 
-    <title>Biodata</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <style>
-        .center {
-            text-align: center;
-            font-style: oblique;
-            font-size: 10ch;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            background-color: darkorange;
-            border: 5px orangered;
-            margin: 30px;
-            text-decoration-color: silver;
-            color: antiquewhite;
-        }
-    </style>
+      <title>kalkulator</title>
+      <script src="javascript.js"></script>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      
+ </head>
+  <body>
 
-</head>
-<body>
-    <h1 class="center">Biodata</h1>
-    <style>
-    body{
-        background-color: gainsboro;
-    }
-    </style>
-    <style>
-    h2{
-        text-decoration-color: antiquewhite;
-        background-color: darkorange;
-        border: 5px orangered;
-        margin: 50px;
-        padding-left: 1.5ch;
-        height: 100px;
-        width: 300px;
-        padding-top: 0.5ch;
+    <div class="container text-center" id="calc">
         
-    }
-    </style>
-    <style>
-    img{
-        float: right;
-        float: inline-start;
-    }
-    </style>
-    <style>
-    ul{
-        border: 8px orangered;
-        margin: 25px;
-        text
-    }
-    tr,table,th{
-        background-color: darkorange;
-        color: antiquewhite;
-        border: 2px orangered;
-        font-size: 2ch;
-        padding-left:1.5ch;
-    }
-    </style>
-    <img src="mehh.jpg"alt="me" style="width:300px;height:400px;">
+        
+    <div class="calcBG text-center">
+      <div class="row">
+        <small>Calculator</small>
+      </div>
+      <div class="row" id="result">
+        <form name="calc">
+          <input type="text" class="screen text-right" name="result" readonly>
 
-    <table style="width:50%">
-        <body>
-            <tr>
-                <th>Nama        :</th>
-                <th>Difen Yedidya</th>
-            </tr>
-            <tr>
-                <th>tanggal lahir:</th>
-                <th>25 agustus 2000</th>
-            </tr>
-            <tr>
-                <th>umur</th>
-                <th>18 tahun</th>
-            </tr>
-            <tr>
-                <th>gender</th>
-                <th>pria</th>
-            </tr>
-            <tr>
-                <th>alamat</th>
-                <th>jl. Sindang terusan no. 17</th>
-            </tr>
-            <tr>
-                <th>kontak</th>
-                <th>082225281999</th>
-            </tr>
-            <tr>
-                <th>kebangsaan</th>
-                <th>indonesia</th>
-            </tr>
-        </body>
-    </table>
-</body>
+        </form>
+      </div>
+      <div class="row">
+        <button id="allClear" type="button" class="btn btn-danger" onclick="clearScreen()">AC</button>
+        <button id="clear" type="button" class="btn btn-warning" onclick="clearScreen()">CE</button>
+        <button id="%" type="button" class="btn btn-info" onclick="myFunction(this.id)">%</button>
+        <button id="/" type="button" class="btn btn-info" onclick="myFunction(this.id)">÷</button>
+      </div>
+      <div class="row">
+        <button id="7" type="button" class="btn btn-info" onclick="myFunction(this.id)">7</button>
+        <button id="8" type="button" class="btn btn-info" onclick="myFunction(this.id)">8</button>
+        <button id="9" type="button" class="btn btn-info" onclick="myFunction(this.id)">9</button>
+        <button id="*" type="button" class="btn btn-info" onclick="myFunction(this.id)">x</button>
+      </div>
+      <div class="row">
+        <button id="4" type="button" class="btn btn-info" onclick="myFunction(this.id)">4</button>
+        <button id="5" type="button" class="btn btn-info" onclick="myFunction(this.id)">5</button>
+        <button id="6" type="button" class="btn btn-info" onclick="myFunction(this.id)">6</button>
+        <button id="-" type="button" class="btn btn-info" onclick="myFunction(this.id)">-</button>
+      </div>
+      <div class="row">
+        <button id="1" type="button" class="btn btn-info" onclick="myFunction(this.id)">1</button>
+        <button id="2" type="button" class="btn btn-info" onclick="myFunction(this.id)">2</button>
+        <button id="3" type="button" class="btn btn-info" onclick="myFunction(this.id)">3</button>
+        <button id="+" type="button" class="btn btn-info" onclick="myFunction(this.id)">+</button>
+      </div>
+      <div class="row">
+        <button id="0" type="button" class="btn btn-info" onclick="myFunction(this.id)">0</button>
+        <button id="." type="button" class="btn btn-info" onclick="myFunction(this.id)">.</button>
+        <button id="equals" type="button" class="btn btn-success" onclick="calculate()">=</button>
+        <button id="blank" type="button" class="btn btn-info">&nbsp;</button>
+      </div>
+    </div>
+  </div>
+      
+  </body>
 </html>
